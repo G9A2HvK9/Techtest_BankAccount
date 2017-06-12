@@ -35,3 +35,7 @@ The functionality is therefore limited and likely not applicable in the real wor
 5.  As a user
     So I can plan my budget
     I want to keep track of my account activity
+
+6.  As a user
+    So I can see my account activity
+    I want to be able to print it to the screen

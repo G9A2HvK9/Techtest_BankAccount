@@ -24,5 +24,18 @@ class Account
     @activity.push(@withdrawal)
   end
 
+  def display_activity
+    puts "Date || Credit || Debit || Balance"
+
+    @activity.each do |entry|
+      if entry.is_a?(Withdrawal)
+        puts "#{entry.date.strftime('%D')} || --- || #{entry.amount} || #{entry.new_balance}"
+      else
+        puts "#{entry.date.strftime('%D')} || #{entry.amount} || --- || #{entry.new_balance}"
+      end
+    end
+
+  end
+
 
 end
