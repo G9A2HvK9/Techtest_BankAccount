@@ -1,4 +1,4 @@
-#bank techtest
+# bank techtest
 
 The aim of this tech test is to set up a simple application to handle the deposits and withdrawals of a sample user in a sample bank account.
 
@@ -13,3 +13,11 @@ The functionality is therefore limited and likely not applicable in the real wor
 3. From the command line, run 'bundle install'
 4. From the command line, run 'rspec --init'
 5. From the command line, run 'rspec' -- make sure all tests pass
+
+## User Stories && Functionality
+
+1.  As a user
+    So I can use the banking service
+    I want to be able open an account
+
+2. 
