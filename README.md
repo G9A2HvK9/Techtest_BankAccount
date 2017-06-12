@@ -20,4 +20,16 @@ The functionality is therefore limited and likely not applicable in the real wor
     So I can use the banking service
     I want to be able open an account
 
-2. 
+2.  As a user
+    So I can see how much money I have
+    I want to see my balance
+
+3.  As a user
+    So I can save money
+    I want to be able to deposit money in my account
+
+4.  As a user
+    So I can spend money
+    I want to be able to withdraw money from my account
+
+5. 
