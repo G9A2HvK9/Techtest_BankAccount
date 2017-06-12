@@ -1,6 +1,6 @@
 require 'date'
-require '/Users/hendrikgeiger/makers/techtests/bank/src/deposit.rb'
-require '/Users/hendrikgeiger/makers/techtests/bank/src/withdrawal.rb'
+require './src/deposit.rb'
+require './src/withdrawal.rb'
 
 class Account
   attr_reader :balance, :activity

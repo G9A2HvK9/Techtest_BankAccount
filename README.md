@@ -16,26 +16,26 @@ The functionality is therefore limited and likely not applicable in the real wor
 
 ## User Stories && Functionality
 
-1.  As a user
-    So I can use the banking service
-    I want to be able open an account
+1.  As a user  
+    So I can use the banking service  
+    I want to be able open an account  
 
-2.  As a user
-    So I can see how much money I have
-    I want to see my balance
+2.  As a user  
+    So I can see how much money I have  
+    I want to see my balance  
 
-3.  As a user
-    So I can save money
-    I want to be able to deposit money in my account
+3.  As a user  
+    So I can save money  
+    I want to be able to deposit money in my account  
 
-4.  As a user
-    So I can spend money
-    I want to be able to withdraw money from my account
+4.  As a user  
+    So I can spend money  
+    I want to be able to withdraw money from my account  
 
-5.  As a user
-    So I can plan my budget
-    I want to keep track of my account activity
+5.  As a user  
+    So I can plan my budget  
+    I want to keep track of my account activity  
 
-6.  As a user
-    So I can see my account activity
-    I want to be able to print it to the screen
+6.  As a user  
+    So I can see my account activity  
+    I want to be able to print it to the screen  
