@@ -41,7 +41,7 @@ describe Account do
   it "Correctly displays account activity" do
     @account.deposit(500)
     @account.withdraw(100)
-    expect{ @account.display_activity }.to output("Date || Credit || Debit || Balance\n06/12/17 || 500 || --- || 500\n06/12/17 || --- || 100 || 400\n").to_stdout
+    expect{ @account.display_activity }.to output("Date || Credit || Debit || Balance\n06/12/17 || --- || 100 || 400\n06/12/17 || 500 || --- || 500\n").to_stdout
   end
 
 end

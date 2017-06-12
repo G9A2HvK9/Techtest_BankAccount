@@ -27,7 +27,7 @@ class Account
   def display_activity
     puts "Date || Credit || Debit || Balance"
 
-    @activity.each do |entry|
+    @activity.reverse.each do |entry|
       if entry.is_a?(Withdrawal)
         puts "#{entry.date.strftime('%D')} || --- || #{entry.amount} || #{entry.new_balance}"
       else
