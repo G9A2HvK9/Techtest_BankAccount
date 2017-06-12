@@ -11,4 +11,8 @@ describe Withdrawal do
     expect(@withdrawal).to have_attributes(amount: 100, date: nil)
   end
 
+  it "Stores the new balance" do
+    expect(@withdrawal.new_balance).to be(nil)
+  end
+
 end

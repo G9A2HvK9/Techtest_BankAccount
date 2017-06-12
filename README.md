@@ -32,4 +32,6 @@ The functionality is therefore limited and likely not applicable in the real wor
     So I can spend money
     I want to be able to withdraw money from my account
 
-5. 
+5.  As a user
+    So I can plan my budget
+    I want to keep track of my account activity

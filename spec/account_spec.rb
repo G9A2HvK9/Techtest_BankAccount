@@ -26,8 +26,16 @@ describe Account do
     expect(@account.balance).to be(400)
   end
 
+  it "Correctly tracks deposits" do
+    @account.deposit(500)
+    expect(@account.activity[0].amount).to eq(500)
+    expect(@account.activity[0].new_balance).to eq(500)
+  end
 
-
-
+  it "Correctly tracks withdrawals" do
+    @account.withdraw(100)
+    expect(@account.activity[0].amount).to eq(100)
+    expect(@account.activity[0].new_balance).to eq(-100)
+  end
 
 end

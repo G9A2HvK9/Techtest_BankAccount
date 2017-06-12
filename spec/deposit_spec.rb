@@ -11,4 +11,8 @@ describe Deposit do
     expect(@deposit).to have_attributes(amount: 100, date: nil)
   end
 
+  it "Stores the new balance" do
+    expect(@deposit.new_balance).to be(nil)
+  end
+
 end
