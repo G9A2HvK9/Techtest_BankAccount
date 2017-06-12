@@ -14,7 +14,7 @@ The functionality is therefore limited and likely not applicable in the real wor
 4. From the command line, run 'rspec --init'
 5. From the command line, run 'rspec' -- make sure all tests pass
 
-## User Stories && Functionality
+## User Stories & Functionality
 
 1.  As a user  
     So I can use the banking service  
