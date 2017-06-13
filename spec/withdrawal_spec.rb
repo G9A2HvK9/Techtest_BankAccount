@@ -12,5 +12,5 @@ describe Withdrawal do
       expect {withdrawal.print_transaction}.to output("#{DateTime.now.strftime('%D')} || --- || 500 || 1000\n").to_stdout
     end
   end
-  
+
 end

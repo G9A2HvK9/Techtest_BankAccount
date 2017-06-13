@@ -22,7 +22,7 @@ describe Account do
 
     it "Can accept a deposit" do
       subject.deposit(100)
-      expect(subject.activity.array).not_to be_empty
+      expect(subject.activity.history).not_to be_empty
     end
 
     it "Changes the balance according to deposits" do
@@ -33,7 +33,7 @@ describe Account do
     it "Can dispense a withdrawal" do
       subject.deposit(200)
       subject.withdraw(100)
-      expect(subject.activity.array).not_to be_empty
+      expect(subject.activity.history).not_to be_empty
     end
 
     it "Changes the balance according to withdrawals" do
@@ -53,5 +53,5 @@ describe Account do
       expect {subject.withdraw(100)}.to raise_error(RuntimeError)
     end
   end
-  
+
 end

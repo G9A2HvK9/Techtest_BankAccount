@@ -1,12 +1,16 @@
 # Understands how to track account activity
 
 class Activity
-  attr_reader :array
+  attr_reader :history
+
+  def add(transaction)
+    @history.push(transaction)
+  end
 
   private
 
   def initialize
-    @array = []
+    @history = []
   end
 
 end

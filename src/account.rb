@@ -9,14 +9,14 @@ class Account
   def deposit(amount)
     guard_against_string(amount)
     @balance += amount
-    @activity.array.push(Deposit.new(amount, @balance))
+    @activity.add(Deposit.new(amount, @balance))
   end
 
   def withdraw(amount)
     guard_against_string(amount)
     guard_against_balance(amount)
     @balance -= amount
-    @activity.array.push(Withdrawal.new(amount, @balance))
+    @activity.add(Withdrawal.new(amount, @balance))
   end
 
   private

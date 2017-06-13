@@ -5,16 +5,16 @@ describe 'Features' do
 
   it "should allow a client to deposit 1000 on current date" do
     account.deposit(1000)
-    expect(account.activity.array.last.amount).to eq(1000)
-    expect(account.activity.array.last.balance).to eq(1000)
+    expect(account.activity.history.last.amount).to eq(1000)
+    expect(account.activity.history.last.balance).to eq(1000)
     expect(account.balance).to eq(1000)
   end
 
   it "should allow a client to deposit a further 2000 on current date" do
     account.deposit(1000)
     account.deposit(2000)
-    expect(account.activity.array.last.amount).to eq(2000)
-    expect(account.activity.array.last.balance).to eq(3000)
+    expect(account.activity.history.last.amount).to eq(2000)
+    expect(account.activity.history.last.balance).to eq(3000)
     expect(account.balance).to eq(3000)
   end
 
@@ -22,8 +22,8 @@ describe 'Features' do
     account.deposit(1000)
     account.deposit(2000)
     account.withdraw(500)
-    expect(account.activity.array.last.amount).to eq(500)
-    expect(account.activity.array.last.balance).to eq(2500)
+    expect(account.activity.history.last.amount).to eq(500)
+    expect(account.activity.history.last.balance).to eq(2500)
     expect(account.balance).to eq(2500)
   end
 
