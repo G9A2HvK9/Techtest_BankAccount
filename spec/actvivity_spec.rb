@@ -19,7 +19,7 @@ describe Activity do
 
   it "Stores information on withdrawals" do
     account.withdraw(500)
-    expect(subject.array.last.amount).to be(-500)
+    expect(subject.array.last.amount).to be(500)
     expect(subject.array.last.balance).to be(-500)
   end
 end

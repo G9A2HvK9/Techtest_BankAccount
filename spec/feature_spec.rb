@@ -22,7 +22,7 @@ describe 'Features' do
     account.deposit(1000)
     account.deposit(2000)
     account.withdraw(500)
-    expect(account.activity.array.last.amount).to eq(-500)
+    expect(account.activity.array.last.amount).to eq(500)
     expect(account.activity.array.last.balance).to eq(2500)
     expect(account.balance).to eq(2500)
   end
@@ -31,7 +31,7 @@ describe 'Features' do
     account.deposit(1000)
     account.deposit(2000)
     account.withdraw(500)
-    expect {printer.print_activity(account)}.to output("Date || Credit || Debit || Balance\n06/12/17 || --- || 500 || 2500\n06/12/17 || 2000 || --- || 3000\n06/12/17 || 1000 || --- || 1000\n").to_stdout
+    expect {printer.print_activity(account)}.to output("Date || Credit || Debit || Balance\n#{DateTime.now.strftime('%D')} || --- || 500 || 2500\n#{DateTime.now.strftime('%D')} || 2000 || --- || 3000\n#{DateTime.now.strftime('%D')} || 1000 || --- || 1000\n").to_stdout
   end
 
 

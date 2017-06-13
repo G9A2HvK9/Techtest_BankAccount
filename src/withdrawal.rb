@@ -1,11 +1,11 @@
 # Understands how to record transactions
 require 'date'
 
-class Transaction
+class Withdrawal
   attr_reader :amount, :balance
 
   def print_transaction
-    puts "#{@date.strftime('%D')} || #{@amount > 0 ? @amount : '---'} || #{@amount < 0 ? -@amount : '---'} || #{@balance}"
+    puts "#{@date.strftime('%D')} || --- || #{@amount} || #{@balance}"
   end
 
   private

@@ -1,5 +1,6 @@
 # Understands how to update account balance
-require './src/transaction'
+require './src/withdrawal'
+require './src/deposit'
 require './src/activity'
 
 class Account
@@ -7,12 +8,12 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @activity.array.push(Transaction.new(amount, @balance))
+    @activity.array.push(Deposit.new(amount, @balance))
   end
 
   def withdraw(amount)
     @balance -= amount
-    @activity.array.push(Transaction.new(-amount, @balance))
+    @activity.array.push(Withdrawal.new(amount, @balance))
   end
 
   private
