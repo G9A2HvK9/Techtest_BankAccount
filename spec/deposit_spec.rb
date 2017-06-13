@@ -1,18 +1,16 @@
-require './src/deposit'
-
 describe Deposit do
 
-  before do
-    @deposit = Deposit.new(100, nil)
+  let (:deposit) {Deposit.new(500, 1000)}
+
+  describe "Initialisation" do
+    it { is_expected.to be_an_instance_of(Deposit) }
+    it { is_expected.to have_attributes(amount: nil, balance: nil) }
   end
 
-  it "Initializes correctly" do
-    expect(@deposit).to be_a_kind_of(Deposit)
-    expect(@deposit).to have_attributes(amount: 100, date: nil)
+  describe "Functionality" do
+    it "Can print its own contents in the correct format" do
+      expect {deposit.print_transaction}.to output("#{DateTime.now.strftime('%D')} || 500 || --- || 1000\n").to_stdout
+    end
   end
-
-  it "Stores the new balance" do
-    expect(@deposit.new_balance).to be(nil)
-  end
-
+  
 end

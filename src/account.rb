@@ -1,41 +1,40 @@
-require 'date'
-require './src/deposit.rb'
-require './src/withdrawal.rb'
+# Understands how to update account balance
+require './src/withdrawal'
+require './src/deposit'
+require './src/activity'
 
 class Account
-  attr_reader :balance, :activity
-
-  def initialize(balance = 0, activity = [])
-    @balance = balance
-    @activity = activity
-  end
+  attr_reader :activity, :balance
 
   def deposit(amount)
-    @deposit = Deposit.new(amount)
-    @balance += @deposit.amount
-    @deposit.new_balance = @balance
-    @activity.push(@deposit)
+    guard_against_string(amount)
+    @balance += amount
+    @activity.add(Deposit.new(amount, @balance))
   end
 
   def withdraw(amount)
-    @withdrawal = Withdrawal.new(amount)
-    @balance -= @withdrawal.amount
-    @withdrawal.new_balance = @balance
-    @activity.push(@withdrawal)
+    guard_against_string(amount)
+    guard_against_balance(amount)
+    @balance -= amount
+    @activity.add(Withdrawal.new(amount, @balance))
   end
 
-  def display_activity
-    puts "Date || Credit || Debit || Balance"
+  private
 
-    @activity.reverse.each do |entry|
-      if entry.is_a?(Withdrawal)
-        puts "#{entry.date.strftime('%D')} || --- || #{entry.amount} || #{entry.new_balance}"
-      else
-        puts "#{entry.date.strftime('%D')} || #{entry.amount} || --- || #{entry.new_balance}"
-      end
+  def initialize
+    @activity = Activity.new
+    @balance = 0
+  end
+
+  def guard_against_string(argument)
+    unless argument.is_a?(Float) || argument.is_a?(Integer)
+      raise ("Unrecognized amount")
     end
-
   end
 
-
+  def guard_against_balance(argument)
+    if @balance - argument < 0
+      raise ("You have insufficient funds.")
+    end
+  end
 end

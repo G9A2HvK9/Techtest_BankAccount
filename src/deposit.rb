@@ -1,13 +1,19 @@
+# Understands how to record transactions
 require 'date'
 
 class Deposit
-  attr_reader :date, :amount
-  attr_accessor :new_balance
+  attr_reader :amount, :balance
 
-  def initialize(amount = nil, date = DateTime.now)
-    @date = date
+  def print_transaction
+    puts "#{@date.strftime('%D')} || #{@amount} || --- || #{@balance}"
+  end
+
+  private
+
+  def initialize(amount = nil, balance = nil, date = DateTime.now)
     @amount = amount
-    @new_balance = nil
+    @date = date
+    @balance = balance
   end
 
 end
