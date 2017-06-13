@@ -6,6 +6,7 @@ describe Activity do
   describe "Initialisation" do
     it { is_expected.to be_an_instance_of(Activity) }
     it { is_expected.to have_attributes(history: []) }
+    it { is_expected.to respond_to(:add) }
   end
 
   describe "Functionality" do
