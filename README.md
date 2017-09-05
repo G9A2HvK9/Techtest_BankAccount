@@ -12,6 +12,9 @@ The functionality is therefore limited and likely not applicable in the real wor
 2. Switch into the newly created directory
 3. From the command line, run `~$ bundle install`
 4. From the command line, run `~$ rspec ` -- make sure all tests pass
+5. From the command line, enter into a ruby interpreter (example: `~$ irb`)
+6. From within the ruby interpreter, require the `account.rb` file `require "./src/account.rb"`
+7. From within the ruby interpreter, require the `printer.rb` file `require "./src/printer.rb"`
 
 ## Testing
 
