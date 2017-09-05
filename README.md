@@ -10,10 +10,28 @@ The functionality is therefore limited and likely not applicable in the real wor
 
 1. Clone this repo into a directory of your choice
 2. Switch into the newly created directory
-3. From the command line, run 'bundle install'
-4. From the command line, run 'rspec --init'
-5. From the command line, run 'rspec' -- make sure all tests pass
+3. From the command line, run `~$ bundle install`
+4. From the command line, run `~$ rspec ` -- make sure all tests pass
+5. From the command line, enter into a ruby interpreter (example: `~$ irb`)
+6. From within the ruby interpreter, require the `account.rb` file `require "./src/account.rb"`
+7. From within the ruby interpreter, require the `printer.rb` file `require "./src/printer.rb"`
 
+## Testing
+
+  This app was tested completely in rspec. The tests can be found in the `./spec` directory. There are several unit tests and a single, integrated feature spec to test the full functionality of the product.
+  
+![RSpec Tests](./screenshots/Screenshot_RSpecTests.png?raw=true "RSpec Testing")
+
+  ### Rationale
+  
+  Adhering to good principles of object oriented programming, responsibilities of the programme are devolved across several classes. Although the program is simple, it is made up of 5 constituent parts. Together they allow the user to execute all user stories listed below. Accordingly, users can open and check their account. They can make deposits and withdrawals and see their account history.
+  
+  Each of these activities, more or less, is nested in a seperate class. The `Account` class is instantiated with an account activity, which is its own class. When the `#deposit` and `#withdraw` functions are called within the `Account` class, they create a new `Withdrawal` and `Deposit` class respectively and push these into the `Activity` class. Here they are stored in the `history` attribute.
+  
+  
+  The `Printer` class is its own object, and handles the viewing of account activity. The `#print_activity` method takes a specific instance of `Account` as an argument and calls on the dependent `Activity` object to print the account history.
+  
+  
 ## User Stories & Functionality
 
 1.  As a user  
