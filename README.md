@@ -16,6 +16,8 @@ The functionality is therefore limited and likely not applicable in the real wor
 6. From within the ruby interpreter, require the `account.rb` file `require "./src/account.rb"`
 7. From within the ruby interpreter, require the `printer.rb` file `require "./src/printer.rb"`
 
+![Running in irb](./screenshots/Screenshot_irb.png?raw=true "Running the Program in irb")
+
 ## Testing
 
   This app was tested completely in rspec. The tests can be found in the `./spec` directory. There are several unit tests and a single, integrated feature spec to test the full functionality of the product.
