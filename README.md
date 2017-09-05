@@ -25,6 +25,7 @@ The functionality is therefore limited and likely not applicable in the real wor
   
   Each of these activities, more or less, is nested in a seperate class. The `Account` class is instantiated with an account activity, which is its own class. When the `#deposit` and `#withdraw` functions are called within the `Account` class, they create a new `Withdrawal` and `Deposit` class respectively and push these into the `Activity` class. Here they are stored in the `history` attribute.
   
+  
   The `Printer` class is its own object, and handles the viewing of account activity. The `#print_activity` method takes a specific instance of `Account` as an argument and calls on the dependent `Activity` object to print the account history.
   
   
